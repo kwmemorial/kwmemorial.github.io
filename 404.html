@@ -337,7 +337,15 @@ details.q summary{font-size:1.45rem}
 #view-new-agents .photo::after{background-image:url("/img/sunset-panorama.webp")}
 #view-international-paths .photo::after{background-image:url("/img/home-abroad.webp")}
 #view-expat-clients .photo::after{background-image:url("/img/provence-door.webp");background-position:center 40%}
-#view-luxury-guide .photo::after{background-image:url("/img/luxury-living-room.webp");background-position:center 58%}
+.roster{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink)}
+.roster .ranked{border-left:0!important;border-top:0!important;border-bottom:1px solid var(--rule)}
+.paths.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:820px){.roster{grid-template-columns:repeat(2,minmax(0,1fr))}.roster .ranked:nth-child(even){border-left:1px solid var(--rule)!important}.paths.three{grid-template-columns:1fr}}
+#view-luxury-agents .photo::after{background-image:url("/img/aerial-night.webp");background-position:center 50%}
+#view-luxury-switching .photo::after{background-image:url("/img/chevron-sunset.webp");background-position:center 55%}
+#view-luxury-marketing .photo::after{background-image:url("/img/luxury-kitchen-island.webp");background-position:center 50%}
+#view-luxury-economics .photo::after{background-image:url("/img/towers-up.webp");background-position:center 50%}
+#view-luxury-guide .photo::after,#view-luxury-agents .photo::after,#view-luxury-switching .photo::after,#view-luxury-marketing .photo::after,#view-luxury-economics .photo::after{background-image:url("/img/luxury-living-room.webp");background-position:center 58%}
 #view-health-insurance .photo::after{background-image:url("/img/family-virtual-tour.webp")}
 #view-training .photo::after{background-image:url("/img/training-audience.webp");background-position:center 50%}
 #view-profit-share .photo::after{background-image:url("/img/dock-chairs.webp");background-position:center 60%}
@@ -370,18 +378,18 @@ section[id]{scroll-margin-top:72px}
 .herologo{height:clamp(64px,8vw,96px);width:auto;max-width:100%;filter:invert(1);margin-bottom:6px}
 
 /* ===== Luxury pages: no red. Gold accents (from the KW Luxury / ILHM marks), black and white buttons ===== */
-#view-luxury,#view-luxury-guide{--red:#9a7838;--red-dk:#7d612b;--gold-lt:#e3cb93}
-#view-luxury .photo .eyebrow,#view-luxury .dark .eyebrow,#view-luxury .photo h1 em,#view-luxury .dark h2 em,#view-luxury-guide .photo .eyebrow,#view-luxury-guide .dark .eyebrow,#view-luxury-guide .photo h1 em,#view-luxury-guide .dark h2 em{color:var(--gold-lt)}
-#view-luxury .photo .summary-row b,#view-luxury .dark .summary-row b,#view-luxury-guide .photo .summary-row b,#view-luxury-guide .dark .summary-row b{color:var(--gold-lt)}
-#view-luxury .btn,#view-luxury-guide .btn{background:var(--ink);border-color:var(--ink);color:#fff}
-#view-luxury .btn:hover,#view-luxury-guide .btn:hover{background:transparent;color:var(--ink)}
-#view-luxury .btn.ghost,#view-luxury-guide .btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
-#view-luxury .btn.ghost:hover,#view-luxury-guide .btn.ghost:hover{background:var(--ink);color:#fff}
-#view-luxury .photo .btn,#view-luxury .dark .btn,#view-luxury-guide .photo .btn,#view-luxury-guide .dark .btn{background:#fff;border-color:#fff;color:#111}
-#view-luxury .photo .btn:hover,#view-luxury .dark .btn:hover,#view-luxury-guide .photo .btn:hover,#view-luxury-guide .dark .btn:hover{background:transparent;color:#fff}
-#view-luxury .photo .btn.ghost,#view-luxury .dark .btn.ghost,#view-luxury-guide .photo .btn.ghost,#view-luxury-guide .dark .btn.ghost{background:transparent;border-color:#fff;color:#fff}
-#view-luxury .photo .btn.ghost:hover,#view-luxury .dark .btn.ghost:hover,#view-luxury-guide .photo .btn.ghost:hover,#view-luxury-guide .dark .btn.ghost:hover{background:#fff;color:#111}
-#view-luxury .form input:focus-visible,#view-luxury .form textarea:focus-visible,#view-luxury-guide .form input:focus-visible,#view-luxury-guide .form textarea:focus-visible{outline-color:var(--gold-lt)}
+#view-luxury,#view-luxury-guide,#view-luxury-agents,#view-luxury-switching,#view-luxury-marketing,#view-luxury-economics{--red:#9a7838;--red-dk:#7d612b;--gold-lt:#e3cb93}
+#view-luxury .photo .eyebrow,#view-luxury .dark .eyebrow,#view-luxury .photo h1 em,#view-luxury .dark h2 em,#view-luxury-guide .photo .eyebrow,#view-luxury-guide .dark .eyebrow,#view-luxury-guide .photo h1 em,#view-luxury-guide .dark h2 em,#view-luxury-agents .photo .eyebrow,#view-luxury-switching .photo .eyebrow,#view-luxury-marketing .photo .eyebrow,#view-luxury-economics .photo .eyebrow,#view-luxury-agents .dark .eyebrow,#view-luxury-switching .dark .eyebrow,#view-luxury-marketing .dark .eyebrow,#view-luxury-economics .dark .eyebrow,#view-luxury-agents .photo h1 em,#view-luxury-switching .photo h1 em,#view-luxury-marketing .photo h1 em,#view-luxury-economics .photo h1 em,#view-luxury-agents .dark h2 em,#view-luxury-switching .dark h2 em,#view-luxury-marketing .dark h2 em,#view-luxury-economics .dark h2 em{color:var(--gold-lt)}
+#view-luxury .photo .summary-row b,#view-luxury .dark .summary-row b,#view-luxury-guide .photo .summary-row b,#view-luxury-guide .dark .summary-row b,#view-luxury-agents .photo .summary-row b,#view-luxury-switching .photo .summary-row b,#view-luxury-marketing .photo .summary-row b,#view-luxury-economics .photo .summary-row b,#view-luxury-agents .dark .summary-row b,#view-luxury-switching .dark .summary-row b,#view-luxury-marketing .dark .summary-row b,#view-luxury-economics .dark .summary-row b{color:var(--gold-lt)}
+#view-luxury .btn,#view-luxury-guide .btn,#view-luxury-agents .btn,#view-luxury-switching .btn,#view-luxury-marketing .btn,#view-luxury-economics .btn{background:var(--ink);border-color:var(--ink);color:#fff}
+#view-luxury .btn:hover,#view-luxury-guide .btn:hover,#view-luxury-agents .btn:hover,#view-luxury-switching .btn:hover,#view-luxury-marketing .btn:hover,#view-luxury-economics .btn:hover{background:transparent;color:var(--ink)}
+#view-luxury .btn.ghost,#view-luxury-guide .btn.ghost,#view-luxury-agents .btn.ghost,#view-luxury-switching .btn.ghost,#view-luxury-marketing .btn.ghost,#view-luxury-economics .btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+#view-luxury .btn.ghost:hover,#view-luxury-guide .btn.ghost:hover,#view-luxury-agents .btn.ghost:hover,#view-luxury-switching .btn.ghost:hover,#view-luxury-marketing .btn.ghost:hover,#view-luxury-economics .btn.ghost:hover{background:var(--ink);color:#fff}
+#view-luxury .photo .btn,#view-luxury .dark .btn,#view-luxury-guide .photo .btn,#view-luxury-guide .dark .btn,#view-luxury-agents .photo .btn,#view-luxury-switching .photo .btn,#view-luxury-marketing .photo .btn,#view-luxury-economics .photo .btn,#view-luxury-agents .dark .btn,#view-luxury-switching .dark .btn,#view-luxury-marketing .dark .btn,#view-luxury-economics .dark .btn{background:#fff;border-color:#fff;color:#111}
+#view-luxury .photo .btn:hover,#view-luxury .dark .btn:hover,#view-luxury-guide .photo .btn:hover,#view-luxury-guide .dark .btn:hover,#view-luxury-agents .photo .btn:hover,#view-luxury-switching .photo .btn:hover,#view-luxury-marketing .photo .btn:hover,#view-luxury-economics .photo .btn:hover,#view-luxury-agents .dark .btn:hover,#view-luxury-switching .dark .btn:hover,#view-luxury-marketing .dark .btn:hover,#view-luxury-economics .dark .btn:hover{background:transparent;color:#fff}
+#view-luxury .photo .btn.ghost,#view-luxury .dark .btn.ghost,#view-luxury-guide .photo .btn.ghost,#view-luxury-guide .dark .btn.ghost,#view-luxury-agents .photo .btn.ghost,#view-luxury-switching .photo .btn.ghost,#view-luxury-marketing .photo .btn.ghost,#view-luxury-economics .photo .btn.ghost,#view-luxury-agents .dark .btn.ghost,#view-luxury-switching .dark .btn.ghost,#view-luxury-marketing .dark .btn.ghost,#view-luxury-economics .dark .btn.ghost{background:transparent;border-color:#fff;color:#fff}
+#view-luxury .photo .btn.ghost:hover,#view-luxury .dark .btn.ghost:hover,#view-luxury-guide .photo .btn.ghost:hover,#view-luxury-guide .dark .btn.ghost:hover,#view-luxury-agents .photo .btn.ghost:hover,#view-luxury-switching .photo .btn.ghost:hover,#view-luxury-marketing .photo .btn.ghost:hover,#view-luxury-economics .photo .btn.ghost:hover,#view-luxury-agents .dark .btn.ghost:hover,#view-luxury-switching .dark .btn.ghost:hover,#view-luxury-marketing .dark .btn.ghost:hover,#view-luxury-economics .dark .btn.ghost:hover{background:#fff;color:#111}
+#view-luxury .form input:focus-visible,#view-luxury .form textarea:focus-visible,#view-luxury-guide .form input:focus-visible,#view-luxury-guide .form textarea:focus-visible,#view-luxury-agents .form input:focus-visible,#view-luxury-switching .form input:focus-visible,#view-luxury-marketing .form input:focus-visible,#view-luxury-economics .form input:focus-visible,#view-luxury-agents .form textarea:focus-visible,#view-luxury-switching .form textarea:focus-visible,#view-luxury-marketing .form textarea:focus-visible,#view-luxury-economics .form textarea:focus-visible{outline-color:var(--gold-lt)}
 body[data-view="luxury"] .bar a[aria-current="page"]{border-bottom-color:#9a7838}
 body[data-view="luxury"] .mark b{background:#111}
 body[data-view="luxury"] .mark i{color:#9a7838}
@@ -389,8 +397,8 @@ body[data-view="luxury"] .mark i{color:#9a7838}
 @media (max-width:600px){.mark .kwm-logo{height:36px}}
 .mark .intl-logo{display:none;height:60px;width:auto}
 .mark .lux-logo{display:none;height:52px;width:auto}
-body[data-view="luxury"] .mark .txt,body[data-view="luxury-guide"] .mark .txt{display:none}
-body[data-view="luxury"] .mark .lux-logo,body[data-view="luxury-guide"] .mark .lux-logo{display:block}
+body[data-view="luxury"] .mark .txt,body[data-view="luxury-guide"] .mark .txt,body[data-view="luxury-agents"] .mark .txt,body[data-view="luxury-switching"] .mark .txt,body[data-view="luxury-marketing"] .mark .txt,body[data-view="luxury-economics"] .mark .txt{display:none}
+body[data-view="luxury"] .mark .lux-logo,body[data-view="luxury-guide"] .mark .lux-logo,body[data-view="luxury-agents"] .mark .lux-logo,body[data-view="luxury-switching"] .mark .lux-logo,body[data-view="luxury-marketing"] .mark .lux-logo,body[data-view="luxury-economics"] .mark .lux-logo{display:block}
 @media (max-width:600px){.mark .lux-logo{height:40px}}
 body[data-view="international"] .mark .txt,body[data-view="international-paths"] .mark .txt,body[data-view="expat-clients"] .mark .txt{display:none}
 body[data-view="international"] .mark .intl-logo,body[data-view="international-paths"] .mark .intl-logo,body[data-view="expat-clients"] .mark .intl-logo{display:block}
@@ -492,7 +500,7 @@ body[data-view="international"] .mark .intl-logo,body[data-view="international-p
     <div><img src="/logos/kw-memorial.png" alt="Keller Williams Memorial" style="height:40px;width:auto"><p>1220 Augusta Drive, Suite 300<br>Houston, TX 77057<br>713.461.9393</p><p class="sitefoot-social"><a href="https://kwmemorial.com/">kwmemorial.com</a><br><a href="https://www.facebook.com/KellerWilliamsMemorial">Facebook</a> · <a href="https://instagram.com/Kwmemorial">Instagram</a> · <a href="https://www.linkedin.com/company/kw-memorial/">LinkedIn</a> · <a href="https://www.youtube.com/c/KWMemorial">YouTube</a> · <a href="https://tiktok.com/@kwmemorial">TikTok</a></p></div>
     <div><p class="eyebrow">Careers</p><a href="/">Careers at Memorial</a><a href="/international/">International Division</a><a href="/luxury/">Luxury Division</a><a href="/switching-brokerages/">Switching brokerages</a><a href="/new-agents/">New agents</a><a href="https://www.kwcommercialtexas.com/careers/">KW Commercial Texas careers</a></div>
     <div><p class="eyebrow">Guides</p><a href="/training/">Real estate training</a><a href="/full-service-vs-cloud-brokerage/">Full-service vs. cloud</a><a href="/video-and-podcast-marketing-for-real-estate-agents/">Video and podcast marketing</a><a href="/profit-share/">Profit Share and Growth Share</a><a href="/health-insurance-for-real-estate-agents/">Health insurance for agents</a></div>
-    <div><p class="eyebrow">Specialties</p><a href="/international/seven-ways-to-build-an-international-career/">Seven ways to build an international career</a><a href="/international/serving-expat-clients/">Serving expat clients</a><a href="/luxury/how-to-become-a-luxury-agent-in-houston/">How to become a luxury agent</a><a href="#talk">Start a confidential conversation</a></div>
+    <div><p class="eyebrow">Specialties</p><a href="/international/seven-ways-to-build-an-international-career/">Seven ways to build an international career</a><a href="/international/serving-expat-clients/">Serving expat clients</a><a href="/luxury-agents/">For established luxury agents</a><a href="/luxury/how-to-become-a-luxury-agent-in-houston/">How to become a luxury agent</a><a href="#talk">Start a confidential conversation</a></div>
   </div>
 </footer>
 </body>
